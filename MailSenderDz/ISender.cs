@@ -8,6 +8,6 @@ namespace MailSenderDz
 {
    public interface ISender
     {
-        void Send(string message);
+        string Send(string message);
     }
 }

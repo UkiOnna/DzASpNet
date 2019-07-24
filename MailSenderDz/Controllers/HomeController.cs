@@ -9,17 +9,15 @@ namespace MailSenderDz.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        private readonly ISender emailSender;
-        private readonly ISender smsSender;
+        private readonly ISender Sender;
 
-        public HomeController(ISender emailSender, ISender smsSender)
+        public HomeController(ISender emailSender)
         {
-            this.emailSender = emailSender;
-            this.smsSender = smsSender;
+            this.Sender = emailSender;
         }
         public ActionResult Index()
         {
-            
+            ViewBag.Message=Sender.Send("Сообщение");
             return View();
         }
     }

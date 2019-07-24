@@ -7,9 +7,9 @@ namespace MailSenderDz
 {
     public class EmailSender : ISender
     {
-        public void Send(string message)
+        public string Send(string message)
         {
-            throw new NotImplementedException();
+            return "Отправлен email";
         }
     }
 }

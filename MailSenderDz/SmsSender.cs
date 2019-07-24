@@ -7,9 +7,9 @@ namespace MailSenderDz
 {
     public class SmsSender : ISender
     {
-        public void Send(string message)
+        public string Send(string message)
         {
-            throw new NotImplementedException();
+            return "Отправлено sms";
         }
     }
 }
